@@ -227,6 +227,9 @@ public class MainActivity extends AppCompatActivity {
 
 # Berikut Hasil Run
 
-https://github.com/khdrrhmn/DeretFibonacci/assets/115916422/95bce8ff-985a-4717-a6ab-3a0da86f5d08
 
-## Finish
+https://github.com/khdrrhmn/DeretFibonacci/assets/115677567/dea08c06-9422-4797-a25c-fa83421cc174
+
+
+
+# Selesai
