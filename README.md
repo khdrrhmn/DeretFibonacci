@@ -1,98 +1,38 @@
 # DeretFibonacci
-<?xml version="1.0" encoding="utf-8"?>
+Nama    : Aditya khaedirrohman
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:ignore="ExtraText"
-    tools:context="com.fibonanccisequence.MainActivity">
+Nim     : 312210286
 
+Kelas   : TI.22.A1
 
+Matkul  : Pemograman Mobile 1
 
-    <Button
-        android:id="@+id/btnToast"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:onClick="showToast"
-        android:text="Toast"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="OnClick" />
+Dosen   : Donny Maulana, S.Kom., M.M.S.I.
 
-    <Button
-        android:id="@+id/btnRestart"
-        android:layout_width="158dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="652dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/colorPrimary"
-        android:onClick="Restart"
-        android:text="Restart"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="OnClick" />
+## Soalnya adalah dari project sebelumnya Toast number dan Buatlah Method Program java Toast Number
+dengan menghasilkan Bilangan FibonacciSequence (Deret angka Fibonacci) adalah deret angka yang diperoleh dengan menjumlahkan dua angka didepannya / sebelumnya:
 
-    <Button
-        android:id="@+id/btnCount"
-        android:layout_width="139dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="652dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/colorPrimary"
-        android:onClick="counTop"
-        android:text="@string/button_label_count"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="OnClick" />
+1, 1, 2, ...
 
-    <TextView
-        android:id="@+id/show_count"
-        android:layout_width="406dp"
-        android:layout_height="509dp"
-        android:layout_marginTop="8dp"
-        android:background="#FFFF00"
-        android:gravity="center_vertical"
-        android:text="1"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="160sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnCount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnToast"
-        app:layout_constraintVertical_bias="0.291"
-        tools:ignore="RtlCompat" />
+1 + 2 = 3 ( 1, 1, 2, 3, ... )
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+2 + 3 = 5 ( 1, 1, 2, 3, 5, ... )
 
+3 + 5 = 8 ( 1, 1, 2, 3, 5, 8, ... )
 
-package  com.example.fibonanccisequence;
+# jawaban
+## MainActivity
 
+```
+package com.fibonanccisequence;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private int count = 1;
@@ -102,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_toast);
 
         showcount = findViewById(R.id.show_count);
         mbtnToast = findViewById(R.id.btnToast);
@@ -166,8 +106,113 @@ public class MainActivity extends AppCompatActivity {
         return second;
     }
 }
+```
 
 
+## Activity_toast
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText"
+    tools:context="com.fibonanccisequence.MainActivity">
+
+
+
+    <Button
+        android:id="@+id/btnToast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="showToast"
+        android:text="Toast"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="158dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="652dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="Restart"
+        android:text="Restart"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCount"
+        android:layout_width="139dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="652dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="countTop"
+        android:text="@string/button_label_count"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="406dp"
+        android:layout_height="509dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFF00"
+        android:gravity="center_vertical"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="160sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnToast"
+        app:layout_constraintVertical_bias="0.291"
+        tools:ignore="RtlCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+
+## Strings
+
+```
+<resources>
+    <string name="app_name">fibonanci sequence</string>
+    <string name="button_label_toast">Toast</string>
+    <string name="button_label_count">Count</string>
+    <string name="count_initial_value">1</string>
+    <string name="toast_massage">Hello Toast!</string>
+    <string name="Back">Back</string>
+    <string name="Restart">Restart</string>
+</resources>
+```
+
+
+## Colors
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
@@ -178,16 +223,10 @@ public class MainActivity extends AppCompatActivity {
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 </resources>
+```
 
-<resources>
-    <string name="app_name">fibonanci sequence</string>
-    <string name="button_label_toast">Toast</string>
-    <string name="button_label_count">Count</string>
-    <string name="count_initial_value">1</string>
-    <string name="toast_massage">Hello Toast!</string>
-    <string name="Back">Back</string>
-    <string name="Restart">Restart</string>
-</resources>
+# Berikut Hasil Run
 
+https://github.com/FathiaDjawas/DeretFibonacci/assets/115916422/95bce8ff-985a-4717-a6ab-3a0da86f5d08
 
-
+## Finish
